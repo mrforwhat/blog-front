@@ -1,6 +1,6 @@
-FROM node
+FROM nginx
 LABEL name="blog-front"
 LABEL version="1.0"
-COPY ./dist /usr/local/nginx/html
-COPY ./blog-front-nginx.conf /usr/local/nginx/myconf
+COPY ./dist /usr/share/nginx/html
+COPY ./blog-front-nginx.conf /etc/nginx/conf.d
 EXPOSE 80
